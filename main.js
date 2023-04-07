@@ -1,6 +1,8 @@
-window.addEventListener('DOMContentLoaded', function () {
+window.addEventListener('DOMContentLoaded', showform('https://raw.githubusercontent.com/FunctionSir/TransDefenseProject/master/%E6%88%92%E7%BD%91%E7%98%BE(%E5%8F%AF%E8%83%BD%E5%90%AB%E6%89%AD%E8%BD%AC%E6%B2%BB%E7%96%97)%E6%9C%BA%E6%9E%84%E5%88%97%E8%A1%A8.csv'));
+
+function showform(uri) {
 	var e = new XMLHttpRequest();
-	e.open('get', 'https://raw.githubusercontent.com/LS-KR/HRT-price-comparison/main/%E9%AA%97%E5%AD%90%E8%8D%AF%E5%95%86%E8%82%83%E5%8F%8D%E5%90%8D%E5%8D%95.csv'),
+	e.open('get', uri),
 		e.addEventListener('load', function () {
 			var t = document.createElement('canvas').getContext('2d');
 			t.font = '1rem Consolas';
@@ -8,7 +10,7 @@ window.addEventListener('DOMContentLoaded', function () {
 				o = document.querySelector('div#container');
 			e.responseText.split('\n').forEach(function (e, t) {
 				(n[t] = []),
-					e.split(',').forEach(function (e) {
+					e.split(';').forEach(function (e) {
 						n[t].push(e);
 					});
 			}),
@@ -33,4 +35,4 @@ window.addEventListener('DOMContentLoaded', function () {
 				});
 		}),
 		e.send();
-});
+}
