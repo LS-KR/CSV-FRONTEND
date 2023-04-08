@@ -10,7 +10,7 @@ function showform(uri) {
 				o = document.querySelector('div#container');
 			e.responseText.split('\n').forEach(function (e, t) {
 				(n[t] = []),
-					e.split(';').forEach(function (e) {
+					e.split(',').forEach(function (e) {
 						n[t].push(e);
 					});
 			}),
