@@ -20,7 +20,7 @@ function showform(uri) {
 				(t.font = 0 === n ? '1rem Consolas bold' : '1rem Consolas'),
 					e.forEach(function (e, n) {
 						a[n] || (a[n] = 0);
-						var o = t.measureText(e).width * 1.2 + 25;
+						var o = t.measureText(e).width * 1.25 + 25;
 						o > a[n] && (a[n] = o);
 					});
 			}),
